@@ -1,0 +1,131 @@
+
+(squad) D:\My Soft\Python\6908\Project\squad>python  test.py --split dev --load_path save\train\BiDAF(basline)-01\best.pth.tar --name tt --model BiDAF
+[03.05.23 22:26:36] Args: {
+    "batch_size": 64,
+    "char_emb_file": "./data/char_emb.json",
+    "dev_eval_file": "./data/dev_eval.json",
+    "dev_record_file": "./data/dev.npz",
+    "hidden_size": 128,
+    "load_path": "save\\train\\BiDAF(basline)-01\\best.pth.tar",
+    "max_ans_len": 15,
+    "model": "BiDAF",
+    "name": "tt",
+    "num_visuals": 10,
+    "num_workers": 4,
+    "save_dir": "./save/test\\tt-01",
+    "split": "dev",
+    "sub_file": "submission.csv",
+    "test_eval_file": "./data/test_eval.json",
+    "test_record_file": "./data/test.npz",
+    "train_eval_file": "./data/train_eval.json",
+    "train_record_file": "./data/train.npz",
+    "use_squad_v2": true,
+    "word_emb_file": "./data/word_emb.json"
+}
+[03.05.23 22:26:36] Loading embeddings...
+[03.05.23 22:26:39] Building BiDAF model...
+[03.05.23 22:26:41] Loading checkpoint from save\train\BiDAF(basline)-01\best.pth.tar...
+[03.05.23 22:26:41] Building dataset...
+[03.05.23 22:26:41] Evaluating on dev split...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5951/5951 [00:05<00:00, 1110.99it/s, NLL=3.26]
+[03.05.23 22:26:47] Dev NLL: 03.26, F1: 61.07, EM: 57.69, AvNA: 68.22
+[03.05.23 22:26:47] Writing submission file to ./save/test\tt-01\dev_submission.csv...
+
+(squad) D:\My Soft\Python\6908\Project\squad>python  test.py --split dev --load_path save\train\BiDAFwithChar-01\best.pth.tar --name tt --model BiDAFwithChar  
+[03.05.23 22:27:51] Args: {
+    "batch_size": 64,
+    "char_emb_file": "./data/char_emb.json",
+    "dev_eval_file": "./data/dev_eval.json",
+    "dev_record_file": "./data/dev.npz",
+    "hidden_size": 128,
+    "load_path": "save\\train\\BiDAFwithChar-01\\best.pth.tar",
+    "max_ans_len": 15,
+    "model": "BiDAFwithChar",
+    "name": "tt",
+    "num_visuals": 10,
+    "num_workers": 4,
+    "save_dir": "./save/test\\tt-02",
+    "split": "dev",
+    "sub_file": "submission.csv",
+    "test_eval_file": "./data/test_eval.json",
+    "test_record_file": "./data/test.npz",
+    "train_eval_file": "./data/train_eval.json",
+    "train_record_file": "./data/train.npz",
+    "use_squad_v2": true,
+    "word_emb_file": "./data/word_emb.json"
+}
+[03.05.23 22:27:51] Loading embeddings...
+[03.05.23 22:27:54] Building BiDAF with Character-level Embeddings model...
+[03.05.23 22:27:56] Loading checkpoint from save\train\BiDAFwithChar-01\best.pth.tar...
+[03.05.23 22:27:56] Building dataset...
+[03.05.23 22:27:56] Evaluating on dev split...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5951/5951 [00:06<00:00, 983.29it/s, NLL=3.16]
+[03.05.23 22:28:03] Dev NLL: 03.16, F1: 62.51, EM: 59.05, AvNA: 69.70
+[03.05.23 22:28:04] Writing submission file to ./save/test\tt-02\dev_submission.csv...
+
+(squad) D:\My Soft\Python\6908\Project\squad>python  test.py --split dev --load_path save\train\BiDAFwithCharSelfAtt-03\best.pth.tar --name tt --model BiDAFwithCharSelfAtt
+[03.05.23 22:28:37] Args: {
+    "batch_size": 64,
+    "char_emb_file": "./data/char_emb.json",
+    "dev_eval_file": "./data/dev_eval.json",
+    "dev_record_file": "./data/dev.npz",
+    "hidden_size": 128,
+    "load_path": "save\\train\\BiDAFwithCharSelfAtt-03\\best.pth.tar",
+    "max_ans_len": 15,
+    "model": "BiDAFwithCharSelfAtt",
+    "name": "tt",
+    "num_visuals": 10,
+    "num_workers": 4,
+    "save_dir": "./save/test\\tt-03",
+    "split": "dev",
+    "sub_file": "submission.csv",
+    "test_eval_file": "./data/test_eval.json",
+    "test_record_file": "./data/test.npz",
+    "train_eval_file": "./data/train_eval.json",
+    "train_record_file": "./data/train.npz",
+    "use_squad_v2": true,
+    "word_emb_file": "./data/word_emb.json"
+}
+[03.05.23 22:28:37] Loading embeddings...
+[03.05.23 22:28:40] Building BiDAF with Character-level Embeddings model + Self-attention 
+[03.05.23 22:28:42] Loading checkpoint from save\train\BiDAFwithCharSelfAtt-03\best.pth.tar...
+[03.05.23 22:28:42] Building dataset...
+[03.05.23 22:28:42] Evaluating on dev split...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5951/5951 [00:06<00:00, 887.55it/s, NLL=2.73]
+[03.05.23 22:28:49] Dev NLL: 02.73, F1: 66.48, EM: 62.90, AvNA: 72.41
+[03.05.23 22:28:50] Writing submission file to ./save/test\tt-03\dev_submission.csv...
+
+
+(squad) D:\My Soft\Python\6908\Project\squad>python  test.py --split dev --load_path save\train\QANET-02\best.pth.tar --name tt --model QANET
+[03.05.23 22:32:36] Args: {
+    "batch_size": 64,
+    "char_emb_file": "./data/char_emb.json",
+    "dev_eval_file": "./data/dev_eval.json",
+    "dev_record_file": "./data/dev.npz",
+    "hidden_size": 128,
+    "load_path": "save\\train\\QANET-02\\best.pth.tar",
+    "max_ans_len": 15,
+    "model": "QANET",
+    "name": "tt",
+    "num_visuals": 10,
+    "num_workers": 4,
+    "save_dir": "./save/test\\tt-04",
+    "split": "dev",
+    "sub_file": "submission.csv",
+    "test_eval_file": "./data/test_eval.json",
+    "test_record_file": "./data/test.npz",
+    "train_eval_file": "./data/train_eval.json",
+    "train_record_file": "./data/train.npz",
+    "use_squad_v2": true,
+    "word_emb_file": "./data/word_emb.json"
+}
+[03.05.23 22:32:36] Loading embeddings...
+[03.05.23 22:32:39] Building QANET 
+Training char_embeddings
+[03.05.23 22:32:39] Loading checkpoint from save\train\QANET-02\best.pth.tar...
+[03.05.23 22:32:40] Building dataset...
+[03.05.23 22:32:40] Evaluating on dev split...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5951/5951 [00:16<00:00, 363.08it/s, NLL=2.62]
+[03.05.23 22:32:57] Dev NLL: 02.62, F1: 69.25, EM: 65.70, AvNA: 75.53
+[03.05.23 22:32:57] Writing submission file to ./save/test\tt-04\dev_submission.csv...
+
