@@ -141,4 +141,4 @@ tensorboard --logdir ./log/
 <font color=#e52592>-------- BiDAF + Self-attention model with  character-level embeddings. </font>
 <font color=#f9ab00>-------- QANET model</font>
 
-![train](D:\My Soft\Python\6908\Project\squad\img\train.jpg)
+![train](img\train.jpg)
