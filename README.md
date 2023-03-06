@@ -1,6 +1,8 @@
 # CSCI 6908 Project
 Author: Yixiao Yuan   B00785417
 
+
+
 Building a QA system
 
 This is a PyTorch implementation of character-level word embeddings,  Self-attention and QANet for SQuAD 2.0. This repository is built upon the starter code for Stanford's CS224N Default Project.
@@ -136,9 +138,5 @@ tensorboard --logdir ./log/
 
 2. Results
 
-<font color=#425066>-------- BiDAF model</font>
-<font color=#12b5cb>-------- BiDAF  model with  character-level embeddings.</font>
-<font color=#e52592>-------- BiDAF + Self-attention model with  character-level embeddings. </font>
-<font color=#f9ab00>-------- QANET model</font>
-
 ![train](img//train.jpg)
+![train](img//linecolor.jpg)
